@@ -1,10 +1,11 @@
 import { LoginForm } from "components/LoginForm/LoginForm";
+import { Title } from "components/RegisterForm/RegisterForm.styled";
 
 
 export default function Login() {
   return (
     <div>
-        <h2>Login</h2>
+        <Title>Login</Title>
       <LoginForm />
     </div>
   );

@@ -1,5 +1,8 @@
+import { Button } from 'components/UserMenu/UserMenu.styled';
+import { toast } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/Auth/auth.thunk';
+import { Form, Input, Label } from './RegisterForm.styled';
 
 
 export const RegisterForm = () => {
@@ -14,25 +17,26 @@ export const RegisterForm = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    );
+      );
+    toast.success('Registration is successful!');
     form.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
+    <Form onSubmit={handleSubmit} autoComplete="off">
+      <Label>
         Username
-        <input type="text" name="name" />
-      </label>
-      <label>
+        <Input type="text" name="name" />
+      </Label>
+      <Label>
         Email
-        <input type="email" name="email" />
-      </label>
-      <label>
+        <Input type="email" name="email" />
+      </Label>
+      <Label>
         Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+        <Input type="password" name="password" />
+      </Label>
+      <Button type="submit">Sing up</Button>
+    </Form>
   );
 };

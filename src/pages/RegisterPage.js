@@ -1,9 +1,10 @@
 import { RegisterForm } from "components/RegisterForm/RegisterForm";
+import { Title } from "components/RegisterForm/RegisterForm.styled";
 
 export default function Register() {
     return (
         <div>
-            <h2>Registration</h2>
+            <Title>Registration</Title>
         <RegisterForm />
         </div>
     );

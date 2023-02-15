@@ -12,9 +12,9 @@ const clearAuthHeader = () => {
 
 export const register = createAsyncThunk(
     'auth/register',
-    async (dataUser, thunkAPI) => {
+    async (credentials, thunkAPI) => {
         try {
-          const { data } = await axios.post('/users/signup', dataUser);
+          const { data } = await axios.post('/users/signup', credentials);
           setAuthHeader(data.token);
           return data;
         } catch (error) {
@@ -25,9 +25,9 @@ export const register = createAsyncThunk(
 
 export const logIn = createAsyncThunk(
   'auth/login',
-  async (userData, thunkAPI) => {
+  async (credentials, thunkAPI) => {
     try {
-      const { data } = await axios.post('/users/login', userData);
+      const { data } = await axios.post('/users/login', credentials);
       setAuthHeader(data.token);
       return data;
     } catch (error) {
@@ -52,7 +52,7 @@ export const refreshUser = createAsyncThunk(
   async (_,  thunkAPI) => {
     const {token} = thunkAPI.getState().auth;
         if (!token) {
-           return thunkAPI.rejectWithValue('No refresh User. Not token'); 
+          return thunkAPI.rejectWithValue('No refresh User. Not token'); 
         }
         setAuthHeader(token)
     try {

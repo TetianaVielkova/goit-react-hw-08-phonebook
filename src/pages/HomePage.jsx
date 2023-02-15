@@ -1,9 +1,11 @@
+
 export default function Home() {
     return (
       <div>
         <h1 >
-           Welcome HOME page
+          Phonebook
         </h1>
+        <h2>Create your Phonebook</h2>
       </div>
     );
-  }
+  } 
