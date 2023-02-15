@@ -5,25 +5,33 @@ export const List = styled.ul`
 export const Item = styled.li`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
 `
+
 export const DeleteBtn = styled.button`
-    max-width: 100px;
-    padding: 5px 10px;
-    border-radius: 8px;
-    border: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    box-shadow: 5px 5px 6px 1px rgba(34, 60, 80, 0.2); 
-    background-color: #6e6e6e;
-    color: #fff;
-    ransition: background-color 500ms linear;  
-    &:hover,
-    &:focus{
-    color: #fff;
-    background-color: #3e3e3e;
-    transform: scale(1.05);
+  background-color: #f1ee32;
+  display: block;
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+&:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
 `

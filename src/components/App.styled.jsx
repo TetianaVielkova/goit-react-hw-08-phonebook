@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;       
-    margin: 0 auto;
+    margin: 30px auto;
     width: 40%;
     height: 100%;
     border-radius: 5px; 
@@ -11,15 +11,16 @@ export const Container = styled.div`
     padding: 0px 30px 20px 30px;
 `
 export const Title = styled.h1`
-    font-size: 32px;
-    font-weight: 600;
-    color: #000;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 42px;
+    color: #f1ee32;
+    font-weight: 700;
+    text-align: center;
 `
 
-export const SubTitle = styled.h1`
-    font-size: 28px;
-    font-weight: 600;
-    color: #000;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+export const SubTitle = styled.h2`
+font-size: 38px;
+color: #f1ee32;
+font-weight: 700;
+text-align: center;
 `

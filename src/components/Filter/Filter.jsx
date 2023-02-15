@@ -1,13 +1,13 @@
 import { useDispatch} from 'react-redux';
 import { contactsFilterAction } from './../../redux/Contacts/filter.slice';
-import {Input, Label} from './Filter.styled'
+import {Input, Label, Form} from './Filter.styled'
 
 
 export const Filter = () => {
     const dispatch = useDispatch();
     
     return(
-        <div>
+        <Form>
             <Label>Find contacts by name
                 <Input
                 autoComplete="off"
@@ -16,6 +16,6 @@ export const Filter = () => {
                 onChange={event => dispatch(contactsFilterAction(event.target.value.toLowerCase()))}
                 />
             </Label>
-        </div>
+        </Form>
     )
 }
