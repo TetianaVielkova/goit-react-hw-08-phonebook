@@ -22,7 +22,7 @@ export default function Contacts() {
         <ContactForm/>
         <SubTitle>Contacts</SubTitle>
         <Filter/>
-        <div>{isLoading && 'Request in progress...'}</div>
+        <div>{isLoading}</div>
         <ContactList/> 
       </Container>
     </>
