@@ -12,9 +12,11 @@ export const Input = styled.input`
     padding: 15px;
     margin-bottom: 15px;
     margin-top: 8px;
+    border-radius: 10px;
 `
 
 export const Form = styled.form`
     width: 320px;
     margin: 0 auto;
+    
 `

@@ -5,6 +5,7 @@ import {Form, Input, Label, Button} from './ContactForm.styled';
 import { nanoid } from 'nanoid';
 import { selectContacts } from 'redux/Contacts/contacts.selectors';
 import { addContactsThunk } from 'redux/Contacts/contacts.thunk';
+import { toast } from 'react-hot-toast';
 
 export const ContactForm = () => {
     const [name, setName] = useState('');
@@ -26,7 +27,7 @@ export const ContactForm = () => {
             contacts  => contacts.name.toLowerCase() === name.toLowerCase()
         );
         if (nameInArray) {
-            alert(`${name} is already in contacts `)
+            toast.error(`${name} is already in contacts `)
             return
         } 
         const contact = {name, number, id: nanoid()};
