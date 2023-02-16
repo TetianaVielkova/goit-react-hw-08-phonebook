@@ -20,6 +20,7 @@ export const RegisterForm = () => {
       );
       if(form.elements.password.value.length < 7){
         toast.error('Password must be at least 7 characters.Try again');
+        form.reset();
         return
       } else {
         toast.success('Registration is successful!');
